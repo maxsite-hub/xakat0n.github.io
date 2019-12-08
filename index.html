@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+
+<style>
+    .ui-panel    {
+        background-color: #333;
+        color: #fff;
+    }
+
+</style>
+
+<link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"
+      rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous">    </script>
+
+
+<script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+            $.mobile.ajaxEnabled = false;
+            $.mobile.ignoreContentEnabled = true;
+        });
+</script>
+
+
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">    </script>
+
+</head>
+<body data-enhance="false">
+
+<div data-role="page" id="demo-page" >
+
+    <div data-role="header" style="background-color: #337ab7; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9">
+                    <a class="navbar-brand" href="#" style="color: #fff;">
+                        YOUR BRAND
+                    </a>
+                </div>
+                <div class="col-xs-3 nav text-right" style="margin-top: 11px;">
+                    <a id="back-bttn" href="#back" data-rel="back" class="back-btn" data-role="button" data-mini="true" data-inline="true" style="margin: 20px 30px 0 0; color: #fff;"><i class="glyphicon glyphicon-chevron-left" ></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /header -->
+
+    <div data-role="content" id="content" class="container">
+
+        <div class="container" >
+            <form>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Profile </h1>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Firstname </label>
+                                    <input type="text" class="form-control" name="firstname" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Lastname </label>
+                                    <input type="text" class="form-control" name="lastname" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Email </label>
+                            <input type="email" class="form-control" autocomplete="off" required name="email" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Password </label>
+                                    <input type="password" class="form-control" name="password" autocomplete="off" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Confirm Password</label>
+                                    <input type="password" class="form-control" name="confirmpass" autocomplete="off" required />
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div data-role="none" class="row">
+                            <div class="col-xs-4 col-sm-2 content-right">
+                                <button class="btn btn-success" type="submit">SAVE </button>
+                            </div>
+                            <div class="col-xs-8 col-sm-10">
+                                <button class="btn btn-danger" type="reset">CANCEL </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+        <div data-role="panel" id="left-panel" data-display="overlay">
+            <a href="#" data-rel="close">Close</a>
+            <p>Left overlay panel.<br> PANEL FOR YOUR SIDEMENU</p>
+        </div>
+
+
+<script>
+
+$("#left-panel").panel();
+
+$(document).on('swipeleft swiperight', function (e) {
+    if (e.type === 'swiperight') {
+        $('#left-panel').panel('open');
+    }
+    if (e.type === 'swipeleft') {
+        $('#left-panel').panel('close');
+    }
+});
+
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">    </script>
+
+</body>
+</html>
