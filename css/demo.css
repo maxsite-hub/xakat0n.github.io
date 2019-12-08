@@ -116,11 +116,12 @@ a:hover, a:focus {
 }
 
 .main {
-	max-width: 69em;
+	
 	margin: 0 auto;
 }
 
 .column {
+	height:830px;
 	float: left;
 	width: 50%;
 	padding: 0 2em;
@@ -143,10 +144,10 @@ a:hover, a:focus {
 }
 
 button {
+	height: 100%;
 	border: none;
 	padding: 0.6em 1.2em;
-	background: #388a5a;
-	color: #fff;
+	
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	font-size: 1em;
 	letter-spacing: 1px;
