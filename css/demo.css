@@ -121,6 +121,8 @@ a:hover, a:focus {
 }
 
 .column {
+	display: flex;
+        justify-content: space-between;
 	height:830px;
 	float: left;
 	width: 50%;
