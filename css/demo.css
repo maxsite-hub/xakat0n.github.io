@@ -129,7 +129,7 @@ a:hover, a:focus {
 	padding: 0 2em;
 	min-height: 300px;
 	position: relative;
-	text-align: right;
+	
 }
 
 .column:nth-child(2) {
